@@ -3,6 +3,7 @@ import uuid from 'uuid/v4';
 
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import CompletedTodos from './components/CompletedTodos';
 
 import './Todo.css';
 
@@ -36,19 +37,33 @@ class TodoApp extends React.Component {
     }));
   };
 
+  handleClearCompletedTodos = () => {
+    this.setState({ todos: this.getActiveTodos() });
+  };
+
+  getCompletedTodos = () => this.state.todos.filter(todo => todo.isCompleted);
+
+  getActiveTodos = () => this.state.todos.filter(todo => !todo.isCompleted);
+
   render() {
-    const { todos } = this.state;
     return (
       <div className="TodoApp">
         <div className="header">
-          <h2>Your Daily To dos</h2>
+          <h2>Your Daily To Dos</h2>
         </div>
         <TodoForm onSubmit={this.handleAddTodo} />
         <TodoList
-          todos={todos}
+          todos={this.getActiveTodos()}
           onEdit={this.handleEdit}
           onRemove={this.handleRemove}
           onToggleComplete={this.handleToggleComplete}
+        />
+        <CompletedTodos
+          todos={this.getCompletedTodos()}
+          onEdit={this.handleEdit}
+          onRemove={this.handleRemove}
+          onToggleComplete={this.handleToggleComplete}
+          onClearCompletedTodos={this.handleClearCompletedTodos}
         />
       </div>
     );

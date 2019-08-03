@@ -1,0 +1,19 @@
+.CompletedTodos {
+  height: 165px;
+}
+
+.CompletedTodos .header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.CompletedTodos .header h3 {
+  color: #fff;
+}
+
+.CompletedTodos .body {
+  overflow-y: auto;
+  height: 100%;
+}
