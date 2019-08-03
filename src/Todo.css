@@ -6,7 +6,7 @@
   height: 660px;
   border: 1px solid #e6e6e6;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
   background: #fff;
 }
 
@@ -17,6 +17,7 @@
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   color: #ffffff;
   line-height: 28px !important;
+  height: 87px;
 }
 
 .TodoApp .header h2 {

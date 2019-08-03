@@ -13,7 +13,7 @@ const CompletedTodos = ({
 }) =>
   todos.length > 0 && (
     <div className="CompletedTodos">
-      <div className="header">
+      <div className="CompletedTodos__header">
         <h3>Completed</h3>
         <Button size="small" shape="round" onClick={onClearCompletedTodos}>
           Clear

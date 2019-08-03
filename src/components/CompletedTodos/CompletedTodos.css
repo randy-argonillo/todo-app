@@ -2,14 +2,18 @@
   height: 165px;
 }
 
-.CompletedTodos .header {
+.CompletedTodos__header {
   display: flex;
   justify-content: space-between;
   height: 50px;
   align-items: center;
+  padding: 25px;
+  width: 100%;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  line-height: 28px !important;
 }
 
-.CompletedTodos .header h3 {
+.CompletedTodos__header h3 {
   color: #fff;
 }
 
