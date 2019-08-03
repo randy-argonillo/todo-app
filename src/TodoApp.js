@@ -41,15 +41,15 @@ class TodoApp extends React.Component {
     return (
       <div className="TodoApp">
         <div className="header">
-          <h2>Your Daily Todos</h2>
+          <h2>Your Daily To dos</h2>
         </div>
+        <TodoForm onSubmit={this.handleAddTodo} />
         <TodoList
           todos={todos}
           onEdit={this.handleEdit}
           onRemove={this.handleRemove}
           onToggleComplete={this.handleToggleComplete}
         />
-        <TodoForm onSubmit={this.handleAddTodo} />
       </div>
     );
   }
