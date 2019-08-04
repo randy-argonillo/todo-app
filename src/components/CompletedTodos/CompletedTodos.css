@@ -1,5 +1,6 @@
 .CompletedTodos {
   height: 165px;
+  overflow: hidden;
 }
 
 .CompletedTodos__header {
@@ -19,5 +20,5 @@
 
 .CompletedTodos .body {
   overflow-y: auto;
-  height: 100%;
+  height: calc(100% - 50px);
 }

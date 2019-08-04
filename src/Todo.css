@@ -6,7 +6,7 @@
   height: 660px;
   border: 1px solid #e6e6e6;
   border-radius: 8px;
-  overflow: auto;
+  overflow: hidden;
   background: #fff;
 }
 
